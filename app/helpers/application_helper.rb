@@ -12,4 +12,5 @@ module ApplicationHelper
       concat content_tag(:a, 'x', class: 'close', data: { dismiss: 'alert' })
       concat raw(message)
     end
+  end
 end
