@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   #  and :omniauthable :trackable,
-  
+  has_many :posts, inverse_of: :user
   validates_format_of :name, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
   validate :validate_name
   
