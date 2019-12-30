@@ -7,8 +7,7 @@ class User < ApplicationRecord
   
   extend Devise::Models
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :confirmable, :lockable, :timeoutable
+         :recoverable, :rememberable, :validatable,:lockable, :timeoutable
 
   has_attached_file :avatar,
                      styles: { medium: '300x300>', thumb: '100x100>' },
@@ -31,7 +30,7 @@ class User < ApplicationRecord
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
-    conditions[:email]&.downcase!
+    conditions[:email]&.downcase! if conditions[:email]
     login = conditions.delete(:login)
 
     where(conditions.to_hash).where(
