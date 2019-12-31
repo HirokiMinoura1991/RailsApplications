@@ -4,6 +4,10 @@
         <div class="col-10 px-3">
           <p class="my-1">
             <span class="text-secondary"><%= time_ago_in_words(post.created_at) %> ago</span>
+              <% if user_signed_in? && current_user.id == post.user_id %>
+                <%= link_to '削除',"/posts/#{post.id}", method: :delete %>
+                <%= link_to '編集', "/posts/#{post.id}/edit", method: :get %>
+               <% end %> 
           </p>      
           <%= simple_format(post.body) %>
         </div>
