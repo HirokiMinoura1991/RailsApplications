@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   
   
   root 'home#index'
-  resources :posts, only: [:create]
+  resources :posts, only: [:create,:destroy,:edit,:update]
 
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web, at: '/sidekiq'
