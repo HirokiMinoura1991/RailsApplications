@@ -1,0 +1,11 @@
+<div class="contents row">
+  <div class="container">
+    <%= form_with(model: @post, local: true) do |form| %>
+      <h3>
+        Editting now ...
+      </h3>
+      <%= form.text_area :body, placeholder: "body" , rows: "3" %>
+      <%= form.submit "SEND" %>
+    <% end %>
+  </div>
+</div>

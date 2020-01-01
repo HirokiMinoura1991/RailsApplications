@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.1'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -52,6 +52,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'annotate'
+  gem 'faker'
 end
 
 group :test do
@@ -64,3 +66,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# view
+gem 'bootstrap', '~> 4.0.0.beta'
+gem 'jquery-rails'
+gem 'kaminari'
+gem 'popper_js', '~> 1.11.1'
+gem 'tether-rails'
+gem 'devise'
+gem 'sidekiq'
+gem 'sinatra'
+gem 'paperclip','~> 5.0.0'
+gem 'aws-sdk', '>= 2.0.0'
+gem 'kaminari'
+gem 'counter_culture'
+gem 'activeadmin'
