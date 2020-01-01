@@ -73,10 +73,10 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # view
-gem 'bootstrap', '~> 4.0.0.beta'
+gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'kaminari'
-gem 'popper_js', '~> 1.11.1'
+gem 'popper_js', '~> 1.14.5'
 gem 'tether-rails'
 gem 'devise'
 gem 'sidekiq'
